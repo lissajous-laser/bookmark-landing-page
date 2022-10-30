@@ -14,10 +14,26 @@
     color: white;
     border-width: 2px;
     font-size: 13px;
+    height: 3rem;
   }
 
   .button:hover {
     background-color: white;
+  }
+
+  .tab {
+    padding-bottom: 1.5rem;
+    margin-bottom: 0.25rem;
+    width: 15rem;
+    letter-spacing: 0.025em;
+  }
+
+  .card {
+    height: 360px;
+    width: 280px;
+    display: grid;
+    justify-items: center;
+    border-radius: 1rem;
   }
 
   .subheading {
@@ -25,4 +41,24 @@
     font-weight: 500;
   }
 
+  .accordion {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    place-content: space-between;
+    align-items: center;
+  }
+
+  .question {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .answer {
+    margin-top: 1.25rem;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
 }
