@@ -21,11 +21,22 @@
     background-color: white;
   }
 
-  .tab {
-    padding-bottom: 1.5rem;
-    margin-bottom: 0.25rem;
-    width: 15rem;
-    letter-spacing: 0.025em;
+  .button-sm {
+    display: inline;
+    border-radius: 0.30rem;
+    font-weight: 500;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: white;
+    border-width: 2px;
+    font-size: 13px;
+    height: 3rem;
+  }
+
+  .button-sm:hover {
+    background-color: white;    
   }
 
   .card {
@@ -36,9 +47,26 @@
     border-radius: 1rem;
   }
 
-  .subheading {
+  .heading-lg {
     font-size: 32px;
     font-weight: 500;
+    line-height: 1.1;
+  }
+
+  .heading-sm {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  .para-lg {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .para-sm {
+    font-size: 15px;
+    line-height: 1.6;
   }
 
   .accordion {
@@ -50,15 +78,29 @@
   }
 
   .question {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    /* font-size: 1.125rem;
+    line-height: 1.75rem; */
     margin-top: 1.25rem;
     margin-bottom: 0.75rem;
   }
 
-  .answer {
+  /* .answer {
     margin-top: 1.25rem;
     line-height: 2.25rem;
+    margin-bottom: 2rem;
+  } */
+
+  .answer-lg {
+    margin-top: 1.25rem;
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 2rem;    
+  }
+  
+  .answer-sm {
+    margin-top: 1.25rem;
+    font-size: 15px;
+    line-height: 2;
     margin-bottom: 2rem;
   }
 }

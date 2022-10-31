@@ -5,6 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '125': '580px',
+        '160': '640px',
+        '177': '708px',
+        '19/20': '95%',
+      },
       colors: {
         'soft-blue': 'hsl(231, 69%, 60%)',
         'soft-red': 'hsl(0, 94%, 66%)',
@@ -16,10 +22,19 @@ module.exports = {
       fontSize: {
         'sm-xs': '13px', 
       },
+      screens: {
+        'break-1': '1300px',
+        'break-2': '1200px', 
+        'break-3': '1080px',
+        'break-4': '880px',
+        'break-6': '640px',
+        'break-7': '480px'
+      },
       animation: {
         'blueBtnFade': 'blueBtnFade 0.1s linear',
         'redBtnFade': 'redBtnFade 0.1s linear',
-        'firefoxBtnFade': 'firefoxBtnFade 0.1s linear'
+        'firefoxBtnFade': 'firefoxBtnFade 0.1s linear',
+        'menuFadeIn': 'menuFadeIn 0.1s linear'
       },
       keyframes: {
         expand: {
@@ -61,6 +76,22 @@ module.exports = {
             'background-color': 'white',
             'border-color': 'rgb(107, 107, 119)'
           }          
+        },
+        menuFadeIn: {
+          '0%': {
+            'opacity': '0'
+          },
+          '100%': {
+            'opacity': 1
+          }
+        },
+        menuFadeOut: {
+          '0%': {
+            'opacity': '0'
+          },
+          '100%': {
+            'opacity': 1
+          }
         }
       }
     },
