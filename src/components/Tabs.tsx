@@ -10,14 +10,23 @@ export function Tabs(props: {tab: Tab, setTab: (tab: Tab) => void}) {
     if (props.tab === tab) {
       return {className: 'h-1 bg-soft-red w-36 break-4:w-60 mx-auto'};
     } else {
-      return {className: 'h-1 bg-white'};
+      return {className: 'h-1 bg-transparent'};
     }  
   }
+
+  // Highlights text label if active tab.
+  const activeLabel = (tab: Tab) => {
+    if (props.tab === tab) {
+      return {className: 'text-very-dark-blue hover:text-soft-red'};
+    } else {
+      return {className: 'text-firefox-btn-dark hover:text-soft-red'};
+    }  
+  }  
 
   const simpleTab = (
     <div className="border-b flex justify-center max-w-lg break-4:w-60">
       <button
-        className="text-very-dark-blue hover:text-soft-red"
+        {...activeLabel(Tab.simple)}
         onClick={() => props.setTab(Tab.simple)}
       >
         <div className="mb-4 break-4:mb-6 mt-4 break-4:mt-0 tracking-wide">
@@ -31,7 +40,7 @@ export function Tabs(props: {tab: Tab, setTab: (tab: Tab) => void}) {
   const speedyTab = (
     <div className="border-b flex justify-center max-w-lg break-4:w-60">
       <button
-        className="text-very-dark-blue hover:text-soft-red"
+        {...activeLabel(Tab.speedy)}
         onClick={() => props.setTab(Tab.speedy)}
       >
         <div className="mb-4 break-4:mb-6 mt-4 break-4:mt-0 tracking-wide">
@@ -45,7 +54,7 @@ export function Tabs(props: {tab: Tab, setTab: (tab: Tab) => void}) {
   const easyTab = (
     <div className="border-b flex justify-center max-w-lg break-4:w-60">
       <button
-        className="text-very-dark-blue hover:text-soft-red"
+        {...activeLabel(Tab.easy)}
         onClick={() => props.setTab(Tab.easy)}
       >
         <div className="mb-4 break-4:mb-6 mt-4 break-4:mt-0 tracking-wide">
