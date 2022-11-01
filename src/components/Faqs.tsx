@@ -42,16 +42,16 @@ export function Faqs(
 
   return (
     <article
-      className="mb-28 break-6:mb-40 mx-auto relative"
+      className="mb-28 break-6:mb-36 mx-auto relative"
       style={{maxWidth: 530}}
     >
       <h2
-        className="heading-sm break-6:heading-lg text-very-dark-blue text-center mb-4"
+        className="heading-sm break-6:heading-lg text-very-dark-blue text-center mb-6"
       >
       Frequently Asked Questions
       </h2>
       <p
-        className="para-sm break-6:para-lg text-grayish-blue text-center max-w-lg mx-auto mb-16"
+        className="para-sm break-6:para-lg text-grayish-blue text-center max-w-lg mx-auto mb-14"
         style={{maxWidth: 560}}
       >
       Here are some of our FAQs. If you have any other questions you’d like 
@@ -62,9 +62,9 @@ export function Faqs(
           className="accordion text-very-dark-blue hover:text-soft-red"
           onClick={() => parameterisedSetter(0)}
         >
-          <h4 className="para-sm break-6:para-lg question">
+          <span className="para-sm break-6:para-lg question">
             What is Bookmark?
-          </h4>
+          </span>
           {renderArrow(0)}
         </button>
         {props.accordion[0] && 
@@ -83,9 +83,9 @@ export function Faqs(
           className="accordion text-very-dark-blue hover:text-soft-red"
           onClick={() => parameterisedSetter(1)}
         >
-          <h4 className="para-sm break-6:para-lg question">
+          <span className="para-sm break-6:para-lg question">
             How can I request a new browser?
-          </h4>
+          </span>
           {renderArrow(1)}
         </button>
         {props.accordion[1] &&
@@ -104,9 +104,9 @@ export function Faqs(
           className="accordion text-very-dark-blue hover:text-soft-red"
           onClick={() => parameterisedSetter(2)}
         >
-          <h4 className="para-sm break-6:para-lg question">
+          <span className="para-sm break-6:para-lg question">
             Is there a mobile app?
-          </h4>
+          </span>
           {renderArrow(2)}
         </button>
         {props.accordion[2] &&
@@ -124,9 +124,9 @@ export function Faqs(
           className="accordion text-very-dark-blue hover:text-soft-red"
           onClick={() => parameterisedSetter(3)}
         >
-          <h4 className="para-sm break-6:para-lg question">
+          <span className="para-sm break-6:para-lg question">
             What about other Chromium browsers?
-          </h4>
+          </span>
           {renderArrow(3)}
         </button>
         {props.accordion[3] &&
@@ -138,7 +138,7 @@ export function Faqs(
           </div>
         }
       </article>
-      <div className="flex place-content-center mt-14">
+      <div className="flex place-content-center mt-20">
         <MoreInfoBtn/>
       </div>
     </article>

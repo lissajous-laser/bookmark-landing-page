@@ -107,17 +107,19 @@ export default function App() {
       {menuState !== 'off' && <Menu menuState={menuState} setMenuState={setMenuState}/>}
       <div className="App overflow-clip" style={{fontFamily: 'Rubik, sans-serif'}}>
         <Header menuState={menuState} setMenuState={setMenuState}/>
-        {renderRightFingerFromWidth()}
-        <MainArticle/>
-        {renderLeftFingerFromWidth()}
-        <div className="w-5/6 mx-auto" style={{maxWidth: MAX_CONTENT_WIDTH}}>
-          <CenteredContent/>
-        </div>
-        <div className="bg-soft-blue">
-          <Contact/>
-        </div>
+        <main>
+          {renderRightFingerFromWidth()}
+          <MainArticle/>
+          {renderLeftFingerFromWidth()}
+          <div className="w-5/6 mx-auto" style={{maxWidth: MAX_CONTENT_WIDTH}}>
+            <CenteredContent/>
+          </div>
+          <div className="bg-soft-blue">
+            <Contact/>
+          </div>
+        </main>
         <div className="py-6 bg-very-dark-blue">
-          <Footer/>
+        <Footer/>
         </div>
       </div>
     </WinContext.Provider>
@@ -133,7 +135,7 @@ function CenteredContent() {
 
   return (
     <>
-      <article className="mt-6 break-6:mt-8 ">
+      <article className="mt-6 break-6:mt-2 ">
         <h2
           className="heading-sm break-6:heading-lg text-very-dark-blue text-center"
         >
@@ -151,9 +153,9 @@ function CenteredContent() {
       {tab === Tab.simple && <Feature1/>}
       {tab === Tab.speedy && <Feature2/>}
       {tab === Tab.easy && <Feature3/>}
-      <article className="mt-0 break-6:mt-20">
+      <article className="mt-0 break-6:mt-24">
         <h2
-          className="heading-sm break-6:heading-lg break-6:mt-5 mb-5 text-center mx-auto text-very-dark-blue"
+          className="heading-sm break-6:heading-lg mb-5 text-center mx-auto text-very-dark-blue"
           style={{fontSize: (winWidth < BREAK_6 ? 24 : 32), lineHeight: 1.1}}
         >
           Download the extension

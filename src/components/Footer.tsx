@@ -13,7 +13,7 @@ export function Footer() {
     if (winWidth < BREAK_5) {
       return (
         <footer>
-          <nav className="text-white">
+          <div className="text-white">
             <button className="w-48 block py-4 mb-2 mx-auto">
               <img
                 className="mx-auto h-fit"
@@ -47,7 +47,7 @@ export function Footer() {
                 </button>
               </li>
             </ul>
-          </nav> 
+          </div> 
           <div className="flex mt-7 mb-6 justify-center gap-10">
             <a className="relative h-6 w-6" href="https://www.facebook.com">
               <img
@@ -76,15 +76,17 @@ export function Footer() {
           className="flex w-5/6 mx-auto place-content-between"
           style={{maxWidth: MAX_CONTENT_WIDTH}}
         >
-          <nav>
+          <div>
             <ul className="flex gap-12 text-sm-xs place-items-center">
-              <button>
-                <img
-                  className="h-fit mr-4"
-                  src={logoWhiteTxt}
-                  alt="Company logo of Bookmark"
-                />
-              </button>
+              <li>
+                <button>
+                  <img
+                    className="h-fit mr-4"
+                    src={logoWhiteTxt}
+                    alt="Company logo of Bookmark"
+                  />
+                </button>
+              </li>
               <li className="inline py-2">
                 <button
                   className="tracking-widest text-white hover:text-soft-red"
@@ -107,7 +109,7 @@ export function Footer() {
                 </button>
               </li>
             </ul>
-          </nav>
+          </div>
           <div className="flex place-items-center gap-10">
             <a className="relative h-6 w-6" href="https://www.facebook.com">
               <img

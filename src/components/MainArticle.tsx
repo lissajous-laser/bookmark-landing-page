@@ -52,10 +52,8 @@ export function MainArticle() {
     if (winWidth < BREAK_1) {
       return (
         <>
-          <div className="">
-            <div className="mx-auto w-fit my-6 break-7:my-12">
-              {heroElement}
-            </div>
+          <div className="mx-auto w-fit my-6 break-7:my-12">
+            {heroElement}
           </div>
           <div className="w-5/6 mx-auto mb-32 -mt-16">
             {copyElement}

@@ -17,51 +17,55 @@ export function Tabs(props: {tab: Tab, setTab: (tab: Tab) => void}) {
   // Highlights text label if active tab.
   const activeLabel = (tab: Tab) => {
     if (props.tab === tab) {
-      return {className: 'text-very-dark-blue hover:text-soft-red'};
+      return {
+        className: 'text-center text-very-dark-blue hover:text-soft-red'
+      };
     } else {
-      return {className: 'text-firefox-btn-dark hover:text-soft-red'};
+      return {
+        className: 'text-center text-firefox-btn-dark hover:text-soft-red'
+      };
     }  
   }  
 
   const simpleTab = (
     <div className="border-b flex justify-center max-w-lg break-4:w-60">
-      <button
+      <div
         {...activeLabel(Tab.simple)}
         onClick={() => props.setTab(Tab.simple)}
       >
-        <div className="mb-4 break-4:mb-6 mt-4 break-4:mt-0 tracking-wide">
+        <button className="pb-4 break-4:pb-6 pt-6 break-4:pt-2 tracking-wide">
           Simple Bookmarking
-        </div>
+        </button>
         <div {...activeMarker(Tab.simple)}></div>
-      </button>
+      </div>
     </div>
   );
 
   const speedyTab = (
     <div className="border-b flex justify-center max-w-lg break-4:w-60">
-      <button
+      <div
         {...activeLabel(Tab.speedy)}
         onClick={() => props.setTab(Tab.speedy)}
       >
-        <div className="mb-4 break-4:mb-6 mt-4 break-4:mt-0 tracking-wide">
+        <button className="pb-4 break-4:pb-6 pt-6 break-4:pt-2 tracking-wide">
           Speedy Searching
-        </div>
+        </button>
         <div {...activeMarker(Tab.speedy)}></div>
-      </button>
+      </div>
     </div>    
   );
 
   const easyTab = (
     <div className="border-b flex justify-center max-w-lg break-4:w-60">
-      <button
+      <div
         {...activeLabel(Tab.easy)}
         onClick={() => props.setTab(Tab.easy)}
       >
-        <div className="mb-4 break-4:mb-6 mt-4 break-4:mt-0 tracking-wide">
+        <button className="pb-4 break-4:pb-6 pt-6 break-4:pt-2 tracking-wide">
           Easy Sharing
-        </div>
+        </button>
         <div {...activeMarker(Tab.easy)}></div>
-      </button>
+      </div>
     </div>    
   );
 
@@ -81,7 +85,7 @@ export function Tabs(props: {tab: Tab, setTab: (tab: Tab) => void}) {
     } else {
       return (
         <div
-          className="text-firefox-btn-dark flex justify-center mt-16 pt-2"
+          className="text-firefox-btn-dark flex justify-center mt-16"
           style={{letterSpacing: '0.2rem'}}
         >
           {simpleTab}
