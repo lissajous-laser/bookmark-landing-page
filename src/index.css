@@ -21,6 +21,10 @@
     background-color: white;
   }
 
+  .button:active {
+    background-color: white;    
+  }
+
   .button-sm {
     display: inline;
     border-radius: 0.30rem;
@@ -37,6 +41,10 @@
 
   .button-sm:hover {
     background-color: white;    
+  }
+
+  .button-sm:active {
+    background-color: white;
   }
 
   .card {
@@ -91,16 +99,17 @@
   } */
 
   .answer-lg {
-    margin-top: 1.25rem;
+    box-sizing: border-box;
+    padding-top: 1.25rem;
     font-size: 18px;
     line-height: 2;
-    margin-bottom: 2rem;    
+    padding-bottom: 2rem;    
   }
   
   .answer-sm {
-    margin-top: 1.25rem;
+    padding-top: 1.25rem;
     font-size: 15px;
     line-height: 2;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 }

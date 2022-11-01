@@ -9,7 +9,7 @@ module.exports = {
         '125': '580px',
         '160': '640px',
         '177': '708px',
-        '19/20': '95%',
+        '1/14': '7.1%',
       },
       colors: {
         'soft-blue': 'hsl(231, 69%, 60%)',
@@ -34,17 +34,38 @@ module.exports = {
         'blueBtnFade': 'blueBtnFade 0.1s linear',
         'redBtnFade': 'redBtnFade 0.1s linear',
         'firefoxBtnFade': 'firefoxBtnFade 0.1s linear',
-        'menuFadeIn': 'menuFadeIn 0.1s linear'
+        'fadeIn': 'fadeIn 0.1s linear',
+        'fadeOut': 'fadeOut 0.13s linear',
+        'expand': 'expand 0.1s ease-in',
+        'unmask': 'unmask 1s linear',
       },
       keyframes: {
         expand: {
-          '0%': {'height': '0',
-            'margin-top': '0',
-            'margin-bottom': '0'
+          '0%': {
+            // 'position': 'relative',
+            // 'z-index': '-10',
+            'box-sizing': 'border-box',
+            'height': '0',
+            'overflow': 'clip'
           },
-          '100%': {'height': '300px',
-            'margin-top': '1.25rem',
-            'margin-bottom': '2rem'
+          '100%': {
+            // 'position': 'relative',
+            // 'z-index': '-10',
+            'box-sizing': 'border-box',
+            'height': '160px',
+            'overflow': 'clip'
+          }
+        },
+        unmask: {
+          '0%': {
+            'position': 'absolute',
+            'bottom': '0',
+            'height': '160px',            
+          },
+          '100%': {
+            'position': 'absolute',
+            'bottom': '0',
+            'height': '0',
           }
         },
         blueBtnFade: {
@@ -77,20 +98,20 @@ module.exports = {
             'border-color': 'rgb(107, 107, 119)'
           }          
         },
-        menuFadeIn: {
+        fadeIn: {
           '0%': {
-            'opacity': '0'
+            'opacity': 0
           },
           '100%': {
             'opacity': 1
           }
         },
-        menuFadeOut: {
+        fadeOut: {
           '0%': {
-            'opacity': '0'
+            'opacity': 1
           },
           '100%': {
-            'opacity': 1
+            'opacity': 0
           }
         }
       }
