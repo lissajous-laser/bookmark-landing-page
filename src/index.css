@@ -13,7 +13,7 @@
     padding-bottom: 0.75rem;
     color: white;
     border-width: 2px;
-    font-size: 13px;
+    font-size: 14px;
     height: 3rem;
   }
 
@@ -58,13 +58,13 @@
   .heading-lg {
     font-size: 32px;
     font-weight: 500;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   .heading-sm {
     font-size: 24px;
     font-weight: 500;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   .para-lg {
